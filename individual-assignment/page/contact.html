@@ -24,7 +24,7 @@
         <section>
             <article>
                 <div class="container-large">
-                    <form action="insertStudentAction.php" id="form" method="POST">
+                    <form action="mailto:zubliquzaini@gmail.com" name="Hi I want to get to know you" id="form" method="POST" enctype="multipart/form-data">
                         <fieldset>
                             <legend>Contact me via email</legend>
                             <table>
@@ -49,8 +49,8 @@
                                 <tr>
                                     <td>
                                         <select name="college" id="college">
-                                            <option value="tg1">Say Hello</option>
-                                            <option value="tg2">Discussion</option>
+                                            <option value="Say Hello">Say Hello</option>
+                                            <option value="Discussion">Discussion</option>
                                         </select><br>
                                     </td>
                                 </tr>
@@ -64,15 +64,18 @@
                                 </tr>
                                 <tr>
                                     <td>
-                                        <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
-                                        <label for="vehicle1"> Do you want to receive updates from my blog?</label><br>
+                                        <input type="checkbox" id="update" name="update" value="Yess update!">
+                                        <label for="update"> Do you want to receive updates from my blog?</label><br>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td colspan="2" align="center">
-                                        <input type="submit" value="Submit">
-                                        <input type="reset" value="Reset">
+                                    <td colspan="2" style="padding-top: 50px;" align="center">
+                                        <input class="btn-follow" type="submit" onclick="emailSubmit()" value="Submit">
+                                        <input class="btn-follow" type="reset" value="Reset">
                                     </td>
+                                </tr>
+                                <tr>
+                                    <blink><p style="text-align: center; color: blue;" id="fast-contact"></p></blink>
                                 </tr>
                             </table>
                         </fieldset>
@@ -81,4 +84,15 @@
             </article>
         </section>
     </body>
+
+    <script type="text/Javascript">
+        function emailSubmit() {
+            alert("Email submitted!");
+            option = prompt("Do you want to get instant reply by zubli? (Yes/No)")
+
+            if(option == "yes" || option == "Yes") {
+                document.getElementById("fast-contact").innerHTML = "Send a whatsapp at 019-7649482";
+            }
+        }
+    </script>
 </html>

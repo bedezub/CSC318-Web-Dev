@@ -5,6 +5,11 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="../css/styles.css">
         <title>Individual Assignment</title>
+        <style>
+            table td {
+                padding: 30px;
+            }
+        </style>
     </head>
     <body class="home-body">
         <header>
@@ -23,23 +28,60 @@
         </header>
         <section>
             <article>
-                <div class="container">
-                    <div class="middle">
-                        <img src="../assets/profile.jpg" alt="" class="user-pic" />
-                        <h4 class="name">Zubli Quzaini</h4>
-                        <h4 class="work">Diploma in Computer Science</h4>
-                    </div>
-                    <div class="footer">
-                    <a href="">
-                        <button class="btn-follow">Get to know me</button>
-                    </a><br/>
-                        <br/>
-                        <h4 class="profile-status">
-                            Hi I am Zubli Quzaini! Nice to meet you <br>
-    
-                        </h4>
-                    </div>
-                    </div>
+                <div class="container-large">
+                    <h3 align="center" style="margin-top: 10px; margin-bottom: 20px;">My Hobbies</h3>
+                    <table style="margin-right: auto; margin-left: auto;" border="1">
+                        <tr>
+                            <th>Hobbies</th>
+                            <th>Type</th>
+                            <th>Example</th>
+                        </tr>
+                        <tr>
+                            <td rowspan="2">Tech related</td>
+                            <td colspan="1">Hardware</td>
+                            <td colspan="2">
+                                <ol type="i">
+                                    <li>Server Setup</li>
+                                    <li>PC Building</li>
+                                    <li>3D Printing</li>
+                                </ol>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="1">Software</td>
+                            <td colspan="2">
+                                <ol type="1">
+                                    <li>Mobile Apps Development</li>
+                                    <ul>
+                                        <li style="margin-left: 15px;">Flutter</li>
+                                        <li style="margin-left: 15px;">Ionic 5</li>
+                                    </ul>
+                                    <li>Web Development</li>
+                                    <ul style="list-style-type: disc;">
+                                        <li style="margin-left: 15px;">Laravel</li>
+                                        <li style="margin-left: 15px;">Codeigniter</li>
+                                    </ul>
+                                </ol>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td rowspan="2">Others</td>
+                            <td colspan="1">Sports</td>
+                            <td colspan="2" style="background-color: blue; color: white; text-align: center;">
+                                none
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="1">Non-Sport</td>
+                            <td colspan="2">
+                                <ol type="A">
+                                    <li>Reading</li>
+                                    <li>Watching Youtube</li>
+                                    <li>Playing Rubiks Cube</li>
+                                </ol>
+                            </td>
+                        </tr>
+                </div>
             </article>
         </section>
     </body>

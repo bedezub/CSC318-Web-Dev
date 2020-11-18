@@ -43,7 +43,7 @@
   }
 
   table td {
-    padding: 10px;
+    padding: 3px;
   }
 
   .header i{
@@ -180,3 +180,8 @@
       background-color: powderblue;
       color: white;
   }
+
+  iframe {
+    display: block;
+    margin: 0 auto;
+}
