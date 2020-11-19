@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 3</title>
+    <script type="text/javascript">
+        month = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+        salary_after_tax = [];
+
+        salary = prompt("Enter monthly salary");
+
+        for(var i=0; i<12; i++) {
+            if(i < 8) {
+                salary_after_tax[i] = salary * 0.95;
+                console.log(salary_after_tax[i]);
+            } else {
+                salary_after_tax[i] = (salary * 1.03) * 0.95;
+                console.log(salary_after_tax[i]);
+            }
+        }
+
+        var sum = 0;
+        for(var i=0; i<12; i++) {
+            sum = sum + salary_after_tax[i];
+        }
+
+        for(var x=0; x<12; x++) {
+            document.write(month[x] + ": " + salary_after_tax[x] + "\n");
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

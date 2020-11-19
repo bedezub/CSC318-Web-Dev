@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 1</title>
+    <script type="text/javascript">
+        option = [];
+        for(var i=0; i<3; i++) {
+            option[i] = prompt("Enter three numbers");
+            console.log(option[i]);
+        }
+
+        var sum = 0;
+        for(var x=0; x<3; x++) {
+            sum += parseInt(option[x]);
+            console.log(sum);
+        }
+
+        window.onload = function() {
+            document.getElementById("sum").innerHTML = "-> Total is: " + sum;
+        }
+    </script>
+</head>
+<body>
+    <p id="sum"></p>
+</body>
+</html>

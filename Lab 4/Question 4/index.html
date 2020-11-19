@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 4</title>
+    <script type="text/javascript">
+        stdName = ["Ali", "Abu", "Bakar", "Kassim", "Siti", "Aisyah", "Rokiah"];
+        stdMark = [90, 30, 40, 50, 60, 60, 80];
+
+        var max = stdMark[0];
+        var min = stdMark[0];
+        var indMax = 0;
+        var indMin = 0;
+        var sum = 0;
+        var average = 0;
+
+        for(var i=0; i<7; i++) {
+            if(max < stdMark[i]) {
+                max = stdMark[i]
+                indMax = i;
+            }
+
+            if(min > stdMark[i]) {
+                min = stdMark[i];
+                indMin = i;
+            }
+        }
+
+        for(var x=0; x<7; x++) {
+            sum = sum + stdMark[x];
+            console.log(stdMark[x]);
+            console.log(sum);
+        }
+
+        average = sum / 7;
+
+        document.write("Highest marks " + stdName[indMax] + " marks: " + max + "\n");
+        document.write("Lowest marks " + stdName[indMin] + " marks: " + min + "\n");
+        document.write("Average marks " + average + "\n");
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
