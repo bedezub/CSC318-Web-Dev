@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript + HTML</title>
+</head>
+<body>
+    <script type="text/JavaScript">
+        // Show prompt. User will enter "Saya sangat sayang EMAK saya"
+        option = prompt("Enter a sentence");
+
+        // Display on HTML
+        document.write("<h1> List of answers </h1>");
+
+        // a. Length of sentence
+        document.write("<p>a. Length of sentence is " + option.length + "</p>");
+
+        // b. Get index of "sayang"
+        indexSayang = option.indexOf("sayang");
+        document.write("<p>b. Index for position 'sayang' is " + indexSayang + "</p>");
+
+        // c. Find the last index of position "saya"
+        indexSaya = option.lastIndexOf("saya");
+        document.write("<p>c. Index for position 'saya' is " + indexSaya + "</p>");
+
+        // d. Get word sayang
+        var getSayang = option.split(" ").find(
+            function(v) { 
+                return v.indexOf("sayang") > -1;
+            }
+        );
+
+        document.write("<p>d. " + getSayang + "</p>");
+
+        // e. Replace EMAK with AYAH
+        nowAyah = option.replace("EMAK", "AYAH");
+        document.write("<p>e. " + nowAyah + "</p>");
+
+        // f. toUpperCase
+        document.write("<p>f. " + option.toUpperCase() + "</p>");
+
+        // g. toLowerCase
+        document.write("<p>g. " + option.toLowerCase() + "</p>");
+        
+        // h. Concate
+        document.write("<p>h. " + option + " indeed" + "</p>");
+
+        // i. Remove whitespaces
+        document.write("<p>i. " + option.split(" ").join("") + "</p>");
+
+        // j. Split string
+        var splitSentence = option.split(" ");
+
+        for(x=0; x<splitSentence.length; x++) {
+            document.write("<p>j. " + x + "." + splitSentence[x] + "</p>");
+        }
+
+        // k. Sort in alphabet
+        splitChar = option.split("");
+        splitChar.sort();
+
+        for(x=0; x<splitChar.length; x++) {
+            document.write("<p>j. " + x + "." + splitChar[x] + "</p>");
+        }
+
+        // 2. Get sentence type
+        getSentence = prompt("Enter anything");
+        document.write("<p>" + typeof(getSentence) + "</p>");
+
+        // 3. Single loop output
+        for(x=0; x<30; x+=2) {
+            document.write((x+2) + " ");
+            if(x % 10 == 8) {
+              document.write("<br>")
+            }
+        }
+
+        // 4. Table to display output
+        document.write("<table>")
+        for(x=0; x<30; x+=2) {
+            if(x % 10 == 0) {
+              document.write("<tr>")
+            }
+            document.write("<td>" + (x+2) + "</td>");
+            if(x % 10 == 8) {
+              document.write("</tr>")
+            }
+        }
+        document.write("</table>")
+    </script>
+</body>
+</html>
+
